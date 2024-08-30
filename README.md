@@ -8,3 +8,20 @@ Clone the repository and run:
 
 ```bash
 npm install
+```
+
+## Running the Application
+
+To start application locally, run:
+
+```bash
+npm start
+```
+
+## Running Tests
+
+To run the tests, use:
+
+```bash
+npm test
+```
