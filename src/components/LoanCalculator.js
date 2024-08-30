@@ -25,7 +25,7 @@ const LoanCalculator = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    calculateMonthlyPayment();
+    // calculateMonthlyPayment();
     setTimeout(() => {
       setSubmissionStatus('Loan details submitted successfully.');
     }, 1000);
@@ -70,7 +70,7 @@ const LoanCalculator = () => {
         />
         <div className="value-display">{interestRate} %</div>
       </div>
-      <button onClick={handleSubmit}>Calculate EMI</button>
+      <button className="calc-button" onClick={calculateMonthlyPayment}>Calculate EMI</button>
       {monthlyPayment && (
         <div className="emi-display">
           <h3>Monthly Home Loan EMI</h3>
@@ -78,6 +78,7 @@ const LoanCalculator = () => {
         </div>
       )}
       <button className="cta-button">Talk To Our Loan Expert</button>
+      <button className="cta-button" onClick={handleSubmit}>Submit Loan Details!</button>
 
       {submissionStatus && <p className="submission-status">{submissionStatus}</p>}
     </div>
